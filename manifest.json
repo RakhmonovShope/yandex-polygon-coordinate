@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Yandex Map Polygon Extractor",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://yandex.uz/maps/*", "https://yandex.ru/maps/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "webRequest",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://yandex.uz/maps/*", "https://yandex.ru/maps/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/Yandex.Browser_icon.svg",
+      "48": "icons/Yandex.Browser_icon.svg",
+      "128": "icons/Yandex.Browser_icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icons/Yandex.Browser_icon.svg",
+    "48": "icons/Yandex.Browser_icon.svg",
+    "128": "icons/Yandex.Browser_icon.svg"
+  }
+}

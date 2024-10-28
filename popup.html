@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yandex Map Polygon Extractor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      width: 200px;
+    }
+    h1 {
+      font-size: 1.5em;
+    }
+    #status {
+      color: green;
+    }
+    button {
+      margin-top: 10px;
+      padding: 5px 10px;
+    }
+  </style>
+</head>
+<body>
+<h1>Polygon Extractor</h1>
+<p>Status: <span id="status">Waiting for data...</span></p>
+<button id="extractButton">Extract Polygon Data</button>
+
+<script>
+  // document.getElementById('extractButton').addEventListener('click', () => {
+  //   chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+  //     chrome.tabs.sendMessage(tabs[0].id, {type: 'extractPolygonData'}, (response) => {
+  //       if (response && response.status) {
+  //         document.getElementById('status').textContent = response.status;
+  //       } else {
+  //         document.getElementById('status').textContent = 'Error extracting data.';
+  //       }
+  //     });
+  //   });
+  // });
+</script>
+</body>
+</html>
